@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1539305861 source:/home/alumno/Escritorio/programacion_1_laboratorio_1-master/Clase_15/punterosYMemoriaDinamica/main.c
+	<stdio.h>
+	<stdlib.h>
+
