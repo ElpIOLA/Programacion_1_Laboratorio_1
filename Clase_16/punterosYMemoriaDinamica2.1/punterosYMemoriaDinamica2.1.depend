@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1539911182 source:/home/alumno/Escritorio/programacion_1_laboratorio_1-master/Clase_16/punterosYMemoriaDinamica2.1/cliente.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+
+1539911090 /home/alumno/Escritorio/programacion_1_laboratorio_1-master/Clase_16/punterosYMemoriaDinamica2.1/cliente.h
+
+1539911197 source:/home/alumno/Escritorio/programacion_1_laboratorio_1-master/Clase_16/punterosYMemoriaDinamica2.1/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cliente.h"
+
