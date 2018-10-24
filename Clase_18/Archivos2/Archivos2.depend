@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1540342313 source:/home/alumno/Descargas/programacion_1_laboratorio_1-master/Clase_18/Archivos2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
+	"archivo.h"
+
+1540342934 source:/home/alumno/Descargas/programacion_1_laboratorio_1-master/Clase_18/Archivos2/persona.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"persona.h"
+
+1540342919 /home/alumno/Descargas/programacion_1_laboratorio_1-master/Clase_18/Archivos2/persona.h
+
+1540341563 source:/home/alumno/Descargas/programacion_1_laboratorio_1-master/Clase_18/Archivos2/archivo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"archivo.h"
+	"persona.h"
+
+1540340089 /home/alumno/Descargas/programacion_1_laboratorio_1-master/Clase_18/Archivos2/archivo.h
+
