@@ -130,3 +130,46 @@
 	<string.h>
 	"utn.h"
 
+1541105398 source:/home/seba18/Desktop/FACULTAD/PROGRAMACION/Clase_20/TP3/Linux_64/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+
+1541103487 /home/seba18/Desktop/FACULTAD/PROGRAMACION/Clase_20/TP3/Linux_64/LinkedList.h
+
+1541104330 /home/seba18/Desktop/FACULTAD/PROGRAMACION/Clase_20/TP3/Linux_64/Employee.h
+
+1541103487 /home/seba18/Desktop/FACULTAD/PROGRAMACION/Clase_20/TP3/Linux_64/parser.h
+
+1541103487 source:/home/seba18/Desktop/FACULTAD/PROGRAMACION/Clase_20/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541103487 source:/home/seba18/Desktop/FACULTAD/PROGRAMACION/Clase_20/TP3/Linux_64/utn.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1541103487 /home/seba18/Desktop/FACULTAD/PROGRAMACION/Clase_20/TP3/Linux_64/utn.h
+
+1541105225 source:/home/seba18/Desktop/FACULTAD/PROGRAMACION/Clase_20/TP3/Linux_64/Employee.c
+	"Employee.h"
+	"utn.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1541105040 source:/home/seba18/Desktop/FACULTAD/PROGRAMACION/Clase_20/TP3/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1541103487 /home/seba18/Desktop/FACULTAD/PROGRAMACION/Clase_20/TP3/Linux_64/Controller.h
+

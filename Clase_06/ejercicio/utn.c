@@ -3,9 +3,9 @@
 #include <time.h>
 
 /**
- * \brief Solicita un número al usuario y devuelve el resultado
+ * \brief Solicita un nÃºmero al usuario y devuelve el resultado
  * \param mensaje Es el mensaje a ser mostrado
- * \return El número ingresado por el usuario
+ * \return El nÃºmero ingresado por el usuario
  *
  */
 float getFloat(char mensaje[])
@@ -18,9 +18,9 @@ float getFloat(char mensaje[])
 
 
 /**
- * \brief Solicita un número al usuario y devuelve el resultado
+ * \brief Solicita un nÃºmero al usuario y devuelve el resultado
  * \param mensaje Es el mensaje a ser mostrado
- * \return El número ingresado por el usuario
+ * \return El nÃºmero ingresado por el usuario
  *
  */
 int getInt(char mensaje[])
@@ -47,11 +47,11 @@ char getChar(char mensaje[])
     return auxiliar;
 }
 /**
- * \brief Genera un número aleatorio
- * \param desde Número aleatorio mínimo
- * \param hasta Número aleatorio máximo
- * \param iniciar Indica si se trata del primer número solicitado 1 indica que si
- * \return retorna el número aleatorio generado
+ * \brief Genera un nÃºmero aleatorio
+ * \param desde NÃºmero aleatorio mÃ­nimo
+ * \param hasta NÃºmero aleatorio mÃ¡ximo
+ * \param iniciar Indica si se trata del primer nÃºmero solicitado 1 indica que si
+ * \return retorna el nÃºmero aleatorio generado
  *
  */
 char getNumeroAleatorio(int desde , int hasta, int iniciar)
@@ -63,9 +63,9 @@ char getNumeroAleatorio(int desde , int hasta, int iniciar)
 
 
 /**
- * \brief Verifica si el valor recibido es numérico
+ * \brief Verifica si el valor recibido es numÃ©rico
  * \param str Array con la cadena a ser analizada
- * \return 1 si es númerico y 0 si no lo es
+ * \return 1 si es nÃºmerico y 0 si no lo es
  *
  */
 
@@ -100,9 +100,9 @@ int esSoloLetras(char str[])
 
 
 /**
- * \brief Verifica si el valor recibido contiene solo letras y números
+ * \brief Verifica si el valor recibido contiene solo letras y nÃºmeros
  * \param str Array con la cadena a ser analizada
- * \return 1 si contiene solo espacio o letras y números, y 0 si no lo es
+ * \return 1 si contiene solo espacio o letras y nÃºmeros, y 0 si no lo es
  *
  */
 int esAlfaNumerico(char str[])
@@ -119,7 +119,7 @@ int esAlfaNumerico(char str[])
 
 
 /**
- * \brief Verifica si el valor recibido contiene solo números, + y -
+ * \brief Verifica si el valor recibido contiene solo nÃºmeros, + y -
  * \param str Array con la cadena a ser analizada
  * \return 1 si contiene solo numeros, espacios y un guion.
  *

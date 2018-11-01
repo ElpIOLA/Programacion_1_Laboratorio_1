@@ -25,7 +25,7 @@ int Employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
 int Employee_setSueldo(Employee* this,int sueldo);
 int Employee_getSueldo(Employee* this,int* sueldo);
 
-int Employee_add(Employee* this);
+int Employee_add(Employee* this, int nuevoId);
 
 int verificarId(char* stringId, int enteroConvertido);
 int verificarNombre(char* stringNombre);

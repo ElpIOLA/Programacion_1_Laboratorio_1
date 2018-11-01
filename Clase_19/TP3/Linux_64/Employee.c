@@ -171,3 +171,17 @@ int verificarSalario(char* stringSalario, int enteroConvertido)
     }
     return retorno;
 }
+
+int Employee_add(Employee* pEmployee, LinkedList* pArrayLinkedList)
+{
+    int retorno=-1;
+    int auxId=0;
+    char auxNombre[128];
+    int auxHorasTrabajadas=0;
+    int auxSueldo=0;
+
+    if(pEmployee != NULL && pArrayLinkedList != NULL)
+    {
+
+    }
+}

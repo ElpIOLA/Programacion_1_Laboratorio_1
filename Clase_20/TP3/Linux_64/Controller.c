@@ -55,7 +55,11 @@ int controller_loadFromBinary(char* path, LinkedList* pArrayListEmployee)
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
     Employee* aux=Employee_new();
-    int Employee_add(aux);
+    int len=0;
+
+    len=ll_len(pArrayListEmployee);
+    Employee_add(aux,len);
+    ll_add(pArrayListEmployee,aux);
     return 1;
 }
 

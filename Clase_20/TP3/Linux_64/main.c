@@ -53,6 +53,10 @@ int main()
                 controller_loadFromBinary("data.bin",listaEmpleados);
                 controller_ListEmployee(listaEmpleados);
             break;
+            case 4:
+                controller_addEmployee(listaEmpleados);
+                controller_ListEmployee(listaEmpleados);
+                break;
         }
     }while(option != 10);
     return 0;

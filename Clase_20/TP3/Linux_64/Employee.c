@@ -173,17 +173,26 @@ int verificarSalario(char* stringSalario, int enteroConvertido)
     return retorno;
 }
 
-int Employee_add(Employee* this)
+int Employee_add(Employee* this, int nuevoId)
 {
-    int auxid;
+    int auxId;
     char auxNombre[128];
     int auxHorasTrabajadas;
     int auxSueldo;
 
     if(this!= NULL)
     {
+        auxId=nuevoId++;
+        utn_setNombre("ingrese nombre de empleado\n",auxNombre,sizeof(auxNombre));
+        auxHorasTrabajadas=utn_setEntero("ingrese las horas trabajadas\n",auxHorasTrabajadas);
+        auxSueldo=utn_setEntero("ingrese sueldo\n",auxSueldo);
 
+        Employee_setId(this,auxId);
+        Employee_setNombre(this,auxNombre);
+        Employee_setHorasTrabajadas(this,auxHorasTrabajadas);
+        Employee_setSueldo(this,auxSueldo);
+
+        return 0;
     }
-
-
+    return 1;
 }
