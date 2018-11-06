@@ -32,4 +32,8 @@ int verificarNombre(char* stringNombre);
 int verificarHorasTrabajadas(char* stringHorasTrabajadas, int enteroConvertido);
 int verificarSalario(char* stringSalario, int enteroConvertido);
 
+int Employee_addDesdeLinkedList(Employee* this, int nuevoId);
+int Employee_editDesdeLinkedList(Employee* this);
+int Employee_sortComparacion(void* elementoUno, void* elementoDos);
+
 #endif // EMPLOYEE_H_INCLUDED

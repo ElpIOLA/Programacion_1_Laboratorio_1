@@ -47,16 +47,10 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
             Employee_setSueldo(auxiliar,auxEnteroSalario);
             ll_add(pArrayListEmployee,auxiliar);
             }
-        /*printf("%s-%s-%s-%s\n",bufferId,
-               bufferNombre,
-               bufferHorasTrabajadas,
-               bufferSalario);*/
-
-
+        }
+        retorno=0;
     }
-    retorno=0;
-}
-return retorno;
+    return retorno;
 }
 
 /** \brief Parsea los datos los datos de los empleados desde el archivo data.csv (modo binario).
@@ -78,7 +72,6 @@ int parser_EmployeeFromBinary(FILE* pFile, LinkedList* pArrayListEmployee)
         {
             pEmpleado= Employee_new();
             fread(pEmpleado,sizeof(Employee),1,pFile);
-            printf("%s\n",pEmpleado->nombre);
             ll_add(pArrayListEmployee,pEmpleado);
 
         }

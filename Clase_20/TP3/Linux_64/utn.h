@@ -21,7 +21,7 @@ int utn_setEntero(char mensaje[], int entero);
  * \return int (0) if error - (1) if ok
  *
  */
-int set_nombre(char mensaje[], char texto[], int len);
+int utn_setNombre(char mensaje[], char texto[], int len);
 
 
 /** \brief sets an alphanumeric string
@@ -30,9 +30,10 @@ int set_nombre(char mensaje[], char texto[], int len);
  * \return int (0) if error - (1) if ok
  *
  */
-int set_texto(char mensaje[], char texto[], int len);
+int utn_setTexto(char mensaje[], char texto[], int len);
 
-int set_cuit(char mensaje[], char cuit[], int len);
+
+int utn_setCuit(char mensaje[], char cuit[], int len);
 
 /** \brief sets a float in a margin
  * \param flt float the float number
@@ -41,7 +42,7 @@ int set_cuit(char mensaje[], char cuit[], int len);
  * \return float Return the float number
  *
  */
-float set_margenFlotante(char mensaje[], float flotante, float min, float max);
+float utn_setMargenFlotante(char mensaje[], float flotante, float min, float max);
 
 /** \brief sets a integer in a margin
  * \param intg int the integer
@@ -50,7 +51,7 @@ float set_margenFlotante(char mensaje[], float flotante, float min, float max);
  * \return int Return the integer
  *
  */
-int set_margenEntero(char mensaje[], int entero, int min, int max);
+int utn_setMargenEntero(char mensaje[], int entero, int min, int max);
 
 
 /** \brief validates that a string has a flotant number
@@ -59,7 +60,7 @@ int set_margenEntero(char mensaje[], int entero, int min, int max);
  * \return int (0) if error - (1) if ok
  *
  */
-int validar_flotante(char str[], int len);
+int utn_validarFlotante(char str[], int len);
 
 /** \brief validates that a string has an integer
  * \param str char a string
@@ -67,7 +68,7 @@ int validar_flotante(char str[], int len);
  * \return int (0) if error - (1) if ok
  *
  */
-int validar_entero(char str[],int len);
+int utn_validarEntero(char str[],int len);
 
 /** \brief validates than a string has alphabetic characters
  * \param str char a string
@@ -75,7 +76,7 @@ int validar_entero(char str[],int len);
  * \return int (0) if error - (1) if ok
  *
  */
-int validar_alfabetico(char str[], int len);
+int utn_validarAlfabetico(char str[], int len);
 
 /** \brief validates than a string has alphanumeric characters
  * \param str char a string
@@ -83,8 +84,8 @@ int validar_alfabetico(char str[], int len);
  * \return int (0) if error - (1) if ok
  *
  */
-int validar_alfanumerico(char str[], int len);
+int utn_validarAlfanumerico(char str[], int len);
 
-int validar_cuit(char str[], int len);
+int utn_validarCuit(char str[], int len);
 
 #endif

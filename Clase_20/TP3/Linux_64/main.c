@@ -22,8 +22,11 @@
 int main()
 {
     int option = 0;
+    static int flag=0;
     LinkedList* listaEmpleados = ll_newLinkedList();
-    do{
+    char quedarse;
+    do
+    {
 
         printf( "Menu\n"
                 "1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n"
@@ -40,24 +43,69 @@ int main()
         scanf("%d", &option);
         switch(option)
         {
-            case 1:
-                controller_loadFromText("data.csv",listaEmpleados);
-                controller_ListEmployee(listaEmpleados);
-                break;
-            case 2:
-                controller_loadFromText("data.csv",listaEmpleados);
-                controller_ListEmployee(listaEmpleados);
-                controller_saveAsBinary("data.bin",listaEmpleados);
-                break;
-            case 3:
+        case 1:
+            controller_loadFromText("data.csv",listaEmpleados);
+            controller_ListEmployee(listaEmpleados);
+            controller_saveAsBinary("data.bin",listaEmpleados);
+            flag=1;
+            break;
+        case 2:
+            if(flag>0)
+            {
                 controller_loadFromBinary("data.bin",listaEmpleados);
                 controller_ListEmployee(listaEmpleados);
+            }
             break;
-            case 4:
+        case 3:
+            if(flag>0)
+            {
                 controller_addEmployee(listaEmpleados);
                 controller_ListEmployee(listaEmpleados);
-                break;
+            }
+            break;
+        case 4:
+            if(flag>0)
+            {
+                do
+                {
+                    controller_ListEmployee(listaEmpleados);
+                    controller_editEmployee(listaEmpleados);
+                    printf("desea seguir haciendo modificaciones a este empleado?('s' para quedarse): ");
+                    quedarse=getc(stdin);
+                }
+                while(quedarse=='s');
+            }
+            break;
+        case 5:
+            if(flag>0)
+            {
+                controller_ListEmployee(listaEmpleados);
+                controller_removeEmployee(listaEmpleados);
+            }
+            break;
+        case 6:
+            controller_listEmployeeFromFile("data.csv");
+            break;
+        case 7:
+            if(flag>0)
+            {
+                controller_sortEmployee(listaEmpleados);
+            }
+            break;
+        case 8:
+            if(flag>0)
+            {
+                controller_saveAsText("data(bckup).csv",listaEmpleados);
+            }
+            break;
+        case 9:
+            if(flag>0)
+            {
+                controller_saveAsBinary("data.bin",listaEmpleados);
+            }
+            break;
         }
-    }while(option != 10);
+    }
+    while(option != 10);
     return 0;
 }
