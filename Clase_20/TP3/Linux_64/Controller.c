@@ -232,7 +232,7 @@ int controller_ListAFewEmployees(LinkedList* pArrayListEmployee, int index)
         for(i=index-2; i<index+2; i++)
         {
             element=ll_get(pArrayListEmployee,i);
-            aux=(Employee*) element;
+            aux=(Employee*)element;
             printf(" %d--%s--%d--%d\n", aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
         }
         retorno=0;
@@ -308,21 +308,13 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
     int retorno=-1;
     FILE *pArchivo=fopen(path,"wb");
     Employee* pEmpleado;
-    int id;
-    char nombre[128];
-    int horasTrabajadas;
-    int sueldo;
     int i;
     if(pArrayListEmployee != NULL && pArchivo != NULL)
     {
         for(i=0; i<ll_len(pArrayListEmployee); i++)
         {
             pEmpleado= ll_get(pArrayListEmployee,i);
-            Employee_getId(pEmpleado,&id);
-            Employee_getNombre(pEmpleado,nombre);
-            Employee_getHorasTrabajadas(pEmpleado,&horasTrabajadas);
-            Employee_getSueldo(pEmpleado,&sueldo);
-            fprintf(pArchivo,"%d,%s,%d,%d\n",id,nombre,horasTrabajadas,sueldo);
+            fwrite(pEmpleado,sizeof(Employee*),1,pArchivo);
         }
         retorno=0;
     }

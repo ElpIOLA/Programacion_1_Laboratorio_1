@@ -24,7 +24,7 @@ int main()
     int option = 0;
     static int flag=0;
     LinkedList* listaEmpleados = ll_newLinkedList();
-    char quedarse;
+
     do
     {
 
@@ -91,14 +91,19 @@ int main()
         case 4:
             if(flag>0)
             {
-                do
+                if(!controller_ListEmployee(listaEmpleados) &&
+                    !controller_editEmployee(listaEmpleados))
                 {
-                    controller_ListEmployee(listaEmpleados);
-                    controller_editEmployee(listaEmpleados);
-                    printf(" Desea seguir haciendo modificaciones a este empleado?('s' para quedarse): ");
-                    quedarse=getc(stdin);
+                    printf(" Se modifico el empleado!!\n");
                 }
-                while(quedarse=='s');
+                else
+                {
+                    printf(" Error.\n");
+                }
+            }
+            else
+            {
+                printf(" Antes de modificar un empleado cargar el archivo con su lista\n");
             }
             break;
         case 5:

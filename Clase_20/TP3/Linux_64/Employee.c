@@ -151,28 +151,34 @@ int Employee_editDesdeLinkedList(Employee* this)
     int auxHorasTrabajadas=0;
     int auxSueldo=0;
     int opcion=0;
+    char quedarse;
 
     if(this!= NULL)
     {
-        opcion=utn_setMargenEntero(" modificar:\n 1. nombre\n 2. horas trabajadas\n 3. sueldo\n opcion: ",opcion,1,3);
-        switch(opcion)
+        do
         {
-        case 1:
-            utn_setNombre("ingrese nombre de empleado: ",auxNombre,sizeof(auxNombre));
-            Employee_setNombre(this,auxNombre);
-            break;
-        case 2:
-            auxHorasTrabajadas=utn_setEntero("ingrese las horas trabajadas: ",auxHorasTrabajadas);
-            Employee_setHorasTrabajadas(this,auxHorasTrabajadas);
-            break;
-        case 3:
-            auxSueldo=utn_setEntero("ingrese sueldo: ",auxSueldo);
-            Employee_setSueldo(this,auxSueldo);
-            break;
-        default:
-            printf(" esta opcion no existe.\n");
-            break;
-        }
+            opcion=utn_setMargenEntero(" modificar:\n 1. nombre\n 2. horas trabajadas\n 3. sueldo\n opcion: ",opcion,1,3);
+            switch(opcion)
+            {
+            case 1:
+                utn_setNombre("ingrese nombre de empleado: ",auxNombre,sizeof(auxNombre));
+                Employee_setNombre(this,auxNombre);
+                break;
+            case 2:
+                auxHorasTrabajadas=utn_setEntero("ingrese las horas trabajadas: ",auxHorasTrabajadas);
+                Employee_setHorasTrabajadas(this,auxHorasTrabajadas);
+                break;
+            case 3:
+                auxSueldo=utn_setEntero("ingrese sueldo: ",auxSueldo);
+                Employee_setSueldo(this,auxSueldo);
+                break;
+            default:
+                printf(" esta opcion no existe.\n");
+                break;
+            }
+            printf(" Desea seguir haciendo modificaciones a este empleado?('s' para quedarse): ");
+            quedarse=getc(stdin);
+        }while(quedarse=='s');
         retorno=0;
     }
     return retorno;
