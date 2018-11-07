@@ -280,15 +280,15 @@ int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
 
     if(pArrayListEmployee != NULL && pArchivo != NULL)
     {
-        fprintf(pArchivo,"id,nombre,horasTrabajadas,sueldo");
+        fprintf(pArchivo,"id,nombre,horasTrabajadas,sueldo\n");
         for(i=0; i<ll_len(pArrayListEmployee); i++)
         {
             pEmpleado= ll_get(pArrayListEmployee,i);
-            Employee_getId(pEmpleado,id);
+            Employee_getId(pEmpleado,&id);
             Employee_getNombre(pEmpleado,nombre);
-            Employee_getHorasTrabajadas(pEmpleado,horasTrabajadas);
-            Employee_getSueldo(pEmpleado,sueldo);
-            fprintf("")
+            Employee_getHorasTrabajadas(pEmpleado,&horasTrabajadas);
+            Employee_getSueldo(pEmpleado,&sueldo);
+            fprintf(pArchivo,"%d,%s,%d,%d\n",id,nombre,horasTrabajadas,sueldo);
         }
         retorno=0;
     }
@@ -313,17 +313,16 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
     int horasTrabajadas;
     int sueldo;
     int i;
-
     if(pArrayListEmployee != NULL && pArchivo != NULL)
     {
         for(i=0; i<ll_len(pArrayListEmployee); i++)
         {
             pEmpleado= ll_get(pArrayListEmployee,i);
-            Employee_getId(pEmpleado,id);
+            Employee_getId(pEmpleado,&id);
             Employee_getNombre(pEmpleado,nombre);
-            Employee_getHorasTrabajadas(pEmpleado,horasTrabajadas);
-            Employee_getSueldo(pEmpleado,sueldo);
-            fwrite(pEmpleado,sizeof(Employee),1,pArchivo);
+            Employee_getHorasTrabajadas(pEmpleado,&horasTrabajadas);
+            Employee_getSueldo(pEmpleado,&sueldo);
+            fprintf(pArchivo,"%d,%s,%d,%d\n",id,nombre,horasTrabajadas,sueldo);
         }
         retorno=0;
     }

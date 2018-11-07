@@ -51,7 +51,6 @@ int main()
                 flag=1;
                 printf(" Se cargo el archivo de texto!!\n");
             }
-            getc(stdin);
             break;
         case 2:
             if(flag>0)
@@ -70,7 +69,6 @@ int main()
             {
                 printf(" El archivo en binario aun no existe. Primero cargar el archivo .csv\n");
             }
-            getc(stdin);
             break;
         case 3:
             if(flag>0)
@@ -89,7 +87,6 @@ int main()
             {
                 printf(" Antes de dar de alta un empleado cargar el archivo con su lista\n");
             }
-            getc(stdin);
             break;
         case 4:
             if(flag>0)
@@ -103,7 +100,6 @@ int main()
                 }
                 while(quedarse=='s');
             }
-            getc(stdin);
             break;
         case 5:
             if(flag>0)
@@ -122,7 +118,6 @@ int main()
             {
                 printf(" Antes de dar de baja un empleado cargar el archivo con su lista\n");
             }
-            getc(stdin);
             break;
         case 6:
             if(!controller_listEmployeeFromFile("data.csv"))
@@ -133,7 +128,6 @@ int main()
             {
                 printf(" Error\n.");
             }
-            getc(stdin);
             break;
         case 7:
             if(flag>0)
@@ -147,12 +141,11 @@ int main()
                     printf(" Error.\n");
                 }
             }
-            getc(stdin);
             break;
         case 8:
             if(flag>0)
             {
-                if(!controller_saveAsText("data.csv",listaEmpleados))
+                if(!controller_saveAsText("data (copia).csv",listaEmpleados))
                 {
                     printf(" Lista guardada!!\n");
                 }
@@ -165,7 +158,6 @@ int main()
             {
                 printf(" No podes guardar la lista si no la cargaste antes.\n");
             }
-            getc(stdin);
             break;
         case 9:
             if(flag>0)
@@ -183,7 +175,6 @@ int main()
             {
                 printf(" No podes guardar la lista si no la cargaste antes.\n");
             }
-            getc(stdin);
             break;
         case 10:
             if(flag>0)
