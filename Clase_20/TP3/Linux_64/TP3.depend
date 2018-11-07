@@ -175,3 +175,48 @@
 
 1541254625 /home/seba18/Desktop/FACULTAD/PROGRAMACION/Clase_20/TP3/Linux_64/Controller.h
 
+1541547199 source:/home/alumno/programacion_1_laboratorio_1/Clase_20/TP3/Linux_64/Employee.c
+	"Employee.h"
+	"utn.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1541549052 /home/alumno/programacion_1_laboratorio_1/Clase_20/TP3/Linux_64/Employee.h
+
+1541546994 /home/alumno/programacion_1_laboratorio_1/Clase_20/TP3/Linux_64/utn.h
+
+1541549639 source:/home/alumno/programacion_1_laboratorio_1/Clase_20/TP3/Linux_64/main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1541540040 /home/alumno/programacion_1_laboratorio_1/Clase_20/TP3/Linux_64/LinkedList.h
+
+1541549048 /home/alumno/programacion_1_laboratorio_1/Clase_20/TP3/Linux_64/Controller.h
+
+1541545253 source:/home/alumno/programacion_1_laboratorio_1/Clase_20/TP3/Linux_64/parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1541540040 source:/home/alumno/programacion_1_laboratorio_1/Clase_20/TP3/Linux_64/utn.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1541549853 source:/home/alumno/programacion_1_laboratorio_1/Clase_20/TP3/Linux_64/Controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"utn.h"
+	"Controller.h"
+
+1541548872 /home/alumno/programacion_1_laboratorio_1/Clase_20/TP3/Linux_64/parser.h
+

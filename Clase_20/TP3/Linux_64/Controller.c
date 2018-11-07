@@ -66,11 +66,16 @@ int controller_addEmployee(LinkedList* pArrayListEmployee)
     int retorno=-1;
     Employee* aux=Employee_new();
     int len=0;
-
+    static int id=0;
     if(pArrayListEmployee != NULL)
     {
         len=ll_len(pArrayListEmployee);
-        Employee_addDesdeLinkedList(aux,len);
+        if(id == 0)
+        {
+            id=len;
+        }
+        id++;
+        Employee_addDesdeLinkedList(aux,id);
         ll_add(pArrayListEmployee,aux);
         retorno=0;
     }
@@ -139,7 +144,6 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
             {
                 if((aux=ll_get(pArrayListEmployee,i))!= NULL && (aux->id)==id)
                 {
-                    Employee_delete(aux);
                     ll_remove(pArrayListEmployee,i);
                     break;
                 }
@@ -172,7 +176,7 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
         {
             element=ll_get(pArrayListEmployee,i);
             aux=(Employee*) element;
-            printf("%d--%s--%d--%d\n", aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
+            printf(" %d--%s--%d--%d\n", aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
         }
         retorno=0;
     }
@@ -201,7 +205,7 @@ int controller_listEmployeeFromFile(char* path)
                           bufferHorasTrabajadas,
                           bufferSalario)==4)
                 {
-                    printf("%s--%s--%s--%s\n",bufferId,
+                    printf(" %s--%s--%s--%s\n",bufferId,
                            bufferNombre,
                            bufferHorasTrabajadas,
                            bufferSalario);
@@ -229,7 +233,7 @@ int controller_ListAFewEmployees(LinkedList* pArrayListEmployee, int index)
         {
             element=ll_get(pArrayListEmployee,i);
             aux=(Employee*) element;
-            printf("%d--%s--%d--%d\n", aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
+            printf(" %d--%s--%d--%d\n", aux->id,aux->nombre,aux->horasTrabajadas,aux->sueldo);
         }
         retorno=0;
     }
@@ -246,10 +250,10 @@ int controller_ListAFewEmployees(LinkedList* pArrayListEmployee, int index)
 int controller_sortEmployee(LinkedList* pArrayListEmployee)
 {
     int retorno=-1;
-
     if(pArrayListEmployee != NULL)
     {
-        ll_sort(pArrayListEmployee,Employee_sortComparacion,1);
+        printf(" Espera...\n");
+        ll_sort(pArrayListEmployee,Employee_sortComparacion,0);
         retorno=0;
     }
     controller_ListEmployee(pArrayListEmployee);
@@ -265,8 +269,31 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_saveAsText(char* path, LinkedList* pArrayListEmployee)
 {
+    int retorno=-1;
+    FILE *pArchivo=fopen(path,"w");
+    Employee* pEmpleado;
+    int id;
+    char nombre[128];
+    int horasTrabajadas;
+    int sueldo;
+    int i;
 
-    return 1;
+    if(pArrayListEmployee != NULL && pArchivo != NULL)
+    {
+        fprintf(pArchivo,"id,nombre,horasTrabajadas,sueldo");
+        for(i=0; i<ll_len(pArrayListEmployee); i++)
+        {
+            pEmpleado= ll_get(pArrayListEmployee,i);
+            Employee_getId(pEmpleado,id);
+            Employee_getNombre(pEmpleado,nombre);
+            Employee_getHorasTrabajadas(pEmpleado,horasTrabajadas);
+            Employee_getSueldo(pEmpleado,sueldo);
+            fprintf("")
+        }
+        retorno=0;
+    }
+    fclose(pArchivo);
+    return retorno;
 }
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo binario).
@@ -281,12 +308,21 @@ int controller_saveAsBinary(char* path, LinkedList* pArrayListEmployee)
     int retorno=-1;
     FILE *pArchivo=fopen(path,"wb");
     Employee* pEmpleado;
+    int id;
+    char nombre[128];
+    int horasTrabajadas;
+    int sueldo;
     int i;
+
     if(pArrayListEmployee != NULL && pArchivo != NULL)
     {
         for(i=0; i<ll_len(pArrayListEmployee); i++)
         {
             pEmpleado= ll_get(pArrayListEmployee,i);
+            Employee_getId(pEmpleado,id);
+            Employee_getNombre(pEmpleado,nombre);
+            Employee_getHorasTrabajadas(pEmpleado,horasTrabajadas);
+            Employee_getSueldo(pEmpleado,sueldo);
             fwrite(pEmpleado,sizeof(Employee),1,pArchivo);
         }
         retorno=0;

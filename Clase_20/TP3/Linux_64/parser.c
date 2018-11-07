@@ -32,11 +32,7 @@ int parser_EmployeeFromText(FILE* pFile, LinkedList* pArrayListEmployee)
             if((fscanf(pFile,"%[^,],%[^,],%[^,],%[^\n]\n",bufferId,
                        bufferNombre,
                        bufferHorasTrabajadas,
-                       bufferSalario)==4) &&
-                       !verificarId(bufferId,auxEnteroId) &&
-                       !verificarNombre(bufferNombre) &&
-                       !verificarHorasTrabajadas(bufferHorasTrabajadas,auxEnteroHorasTrabajadas) &&
-                       !verificarSalario(bufferSalario, auxEnteroSalario))
+                       bufferSalario)==4))
             {
             auxEnteroId=atoi(bufferId);
             auxEnteroHorasTrabajadas=atoi(bufferHorasTrabajadas);

@@ -35,18 +35,10 @@ Employee* Employee_newConParametros(int id,char* nombre,int horasTrabajadas,int 
 int Employee_setId(Employee* this,int id)
 {
     int retorno=-1;
-    static int proximoId=-1;
 
-    if(this!=NULL && id==-1)
+    if(this!=NULL && id>0)
     {
-        proximoId++;
-        this->id=proximoId;
-        retorno=0;
-    }
-    else if(id>proximoId)
-    {
-        proximoId=id;
-        this->id=proximoId;
+        this->id=id;
         retorno=0;
     }
     return retorno;
@@ -129,50 +121,6 @@ int Employee_getSueldo(Employee* this,int* sueldo)
     return retorno;
 }
 
-int verificarId(char* stringId, int enteroConvertido)
-{
-    int retorno=-1;
-    if(stringId != NULL)
-    {
-        // invocar validacion, agregar validaciones especificas y convertir
-        retorno=0;
-    }
-    return retorno;
-}
-
-int verificarNombre(char* stringNombre)
-{
-    int retorno=-1;
-    if(stringNombre != NULL)
-    {
-        // invocar validacion, agregar validaciones especificas y convertir
-        retorno=0;
-    }
-    return retorno;
-}
-
-int verificarHorasTrabajadas(char* stringHorasTrabajadas, int enteroConvertido)
-{
-    int retorno=-1;
-    if(stringHorasTrabajadas != NULL)
-    {
-        // invocar validacion, agregar validaciones especificas y convertir
-        retorno=0;
-    }
-    return retorno;
-}
-
-int verificarSalario(char* stringSalario, int enteroConvertido)
-{
-    int retorno=-1;
-    if(stringSalario != NULL)
-    {
-        // invocar validacion, agregar validaciones especificas y convertir
-        retorno=0;
-    }
-    return retorno;
-}
-
 int Employee_addDesdeLinkedList(Employee* this, int nuevoId)
 {
     int retorno=-1;
@@ -183,10 +131,10 @@ int Employee_addDesdeLinkedList(Employee* this, int nuevoId)
 
     if(this!= NULL)
     {
-        auxId=nuevoId+1;
-        utn_setNombre("ingrese nombre de empleado\n",auxNombre,sizeof(auxNombre));
-        auxHorasTrabajadas=utn_setEntero("ingrese las horas trabajadas\n",auxHorasTrabajadas);
-        auxSueldo=utn_setEntero("ingrese sueldo\n",auxSueldo);
+        auxId=nuevoId;
+        utn_setNombre("ingrese nombre de empleado: ",auxNombre,sizeof(auxNombre));
+        auxHorasTrabajadas=utn_setEntero("ingrese las horas trabajadas: ",auxHorasTrabajadas);
+        auxSueldo=utn_setEntero("ingrese sueldo: ",auxSueldo);
         Employee_setId(this,auxId);
         Employee_setNombre(this,auxNombre);
         Employee_setHorasTrabajadas(this,auxHorasTrabajadas);
@@ -210,15 +158,15 @@ int Employee_editDesdeLinkedList(Employee* this)
         switch(opcion)
         {
         case 1:
-            utn_setNombre("ingrese nombre de empleado\n",auxNombre,sizeof(auxNombre));
+            utn_setNombre("ingrese nombre de empleado: ",auxNombre,sizeof(auxNombre));
             Employee_setNombre(this,auxNombre);
             break;
         case 2:
-            auxHorasTrabajadas=utn_setEntero("ingrese las horas trabajadas\n",auxHorasTrabajadas);
+            auxHorasTrabajadas=utn_setEntero("ingrese las horas trabajadas: ",auxHorasTrabajadas);
             Employee_setHorasTrabajadas(this,auxHorasTrabajadas);
             break;
         case 3:
-            auxSueldo=utn_setEntero("ingrese sueldo\n",auxSueldo);
+            auxSueldo=utn_setEntero("ingrese sueldo: ",auxSueldo);
             Employee_setSueldo(this,auxSueldo);
             break;
         default:

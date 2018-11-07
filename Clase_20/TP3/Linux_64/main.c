@@ -28,40 +28,68 @@ int main()
     do
     {
 
-        printf( "Menu\n"
-                "1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n"
-                "2. Cargar los datos de los empleados desde el archivo data.csv (modo binario).\n"
-                "3. Alta de empleado\n"
-                "4. Modificar datos de empleado\n"
-                "5. Baja de empleado\n"
-                "6. Listar empleados\n"
-                "7. Ordenar empleados\n"
-                "8. Guardar los datos de los empleados en el archivo data.csv (modo texto).\n"
-                "9. Guardar los datos de los empleados en el archivo data.csv (modo binario).\n"
-                "10. Salir\n"
-                "opcion: ");
+        printf( " Menu\n"
+                " 1. Cargar los datos de los empleados desde el archivo data.csv (modo texto).\n"
+                " 2. Cargar los datos de los empleados desde el archivo data.csv (modo binario).\n"
+                " 3. Alta de empleado\n"
+                " 4. Modificar datos de empleado\n"
+                " 5. Baja de empleado\n"
+                " 6. Listar empleados\n"
+                " 7. Ordenar empleados\n"
+                " 8. Guardar los datos de los empleados en el archivo data.csv (modo texto).\n"
+                " 9. Guardar los datos de los empleados en el archivo data.csv (modo binario).\n"
+                " 10. Salir\n"
+                " opcion: ");
         scanf("%d", &option);
         switch(option)
         {
         case 1:
-            controller_loadFromText("data.csv",listaEmpleados);
-            controller_ListEmployee(listaEmpleados);
-            controller_saveAsBinary("data.bin",listaEmpleados);
-            flag=1;
+            if(!controller_loadFromText("data.csv",listaEmpleados)&&
+                    !controller_ListEmployee(listaEmpleados)&&
+                    !controller_saveAsBinary("data.bin",listaEmpleados))
+            {
+                flag=1;
+                printf(" Se cargo el archivo de texto!!\n");
+            }
+            getc(stdin);
             break;
         case 2:
             if(flag>0)
             {
-                controller_loadFromBinary("data.bin",listaEmpleados);
-                controller_ListEmployee(listaEmpleados);
+                if(!controller_loadFromBinary("data.bin",listaEmpleados)&&
+                        !controller_ListEmployee(listaEmpleados))
+                {
+                    printf(" Se cargo el archivo!!\n");
+                }
+                else
+                {
+                    printf(" Error.\n");
+                }
             }
+            else
+            {
+                printf(" El archivo en binario aun no existe. Primero cargar el archivo .csv\n");
+            }
+            getc(stdin);
             break;
         case 3:
             if(flag>0)
             {
-                controller_addEmployee(listaEmpleados);
-                controller_ListEmployee(listaEmpleados);
+                if(!controller_addEmployee(listaEmpleados)&&
+                        !controller_ListEmployee(listaEmpleados))
+                {
+                    printf(" Se agrego el empleado!!\n");
+                }
+                else
+                {
+                    printf(" Error.\n");
+                }
             }
+            else
+            {
+                printf(" Antes de dar de alta un empleado cargar el archivo con su lista\n");
+            }
+            getc(stdin);
             break;
         case 4:
             if(flag>0)
@@ -70,39 +98,101 @@ int main()
                 {
                     controller_ListEmployee(listaEmpleados);
                     controller_editEmployee(listaEmpleados);
-                    printf("desea seguir haciendo modificaciones a este empleado?('s' para quedarse): ");
+                    printf(" Desea seguir haciendo modificaciones a este empleado?('s' para quedarse): ");
                     quedarse=getc(stdin);
                 }
                 while(quedarse=='s');
             }
+            getc(stdin);
             break;
         case 5:
             if(flag>0)
             {
-                controller_ListEmployee(listaEmpleados);
-                controller_removeEmployee(listaEmpleados);
+                if(!controller_ListEmployee(listaEmpleados)&&
+                        !controller_removeEmployee(listaEmpleados))
+                {
+                    printf(" Se dio de baja el empleado!!\n");
+                }
+                else
+                {
+                    printf(" Error.\n");
+                }
             }
+            else
+            {
+                printf(" Antes de dar de baja un empleado cargar el archivo con su lista\n");
+            }
+            getc(stdin);
             break;
         case 6:
-            controller_listEmployeeFromFile("data.csv");
+            if(!controller_listEmployeeFromFile("data.csv"))
+            {
+                printf(" lista mostrada!!\n");
+            }
+            else
+            {
+                printf(" Error\n.");
+            }
+            getc(stdin);
             break;
         case 7:
             if(flag>0)
             {
-                controller_sortEmployee(listaEmpleados);
+                if(!controller_sortEmployee(listaEmpleados))
+                {
+                    printf(" Empleados ordenados!!\n");
+                }
+                else
+                {
+                    printf(" Error.\n");
+                }
             }
+            getc(stdin);
             break;
         case 8:
             if(flag>0)
             {
-                controller_saveAsText("data(bckup).csv",listaEmpleados);
+                if(!controller_saveAsText("data.csv",listaEmpleados))
+                {
+                    printf(" Lista guardada!!\n");
+                }
+                else
+                {
+                    printf(" Error.\n");
+                }
             }
+            else
+            {
+                printf(" No podes guardar la lista si no la cargaste antes.\n");
+            }
+            getc(stdin);
             break;
         case 9:
             if(flag>0)
             {
-                controller_saveAsBinary("data.bin",listaEmpleados);
+                if(!controller_saveAsBinary("data.bin",listaEmpleados))
+                {
+                    printf(" Lista guardada!!\n");
+                }
+                else
+                {
+                    printf(" Error.\n");
+                }
             }
+            else
+            {
+                printf(" No podes guardar la lista si no la cargaste antes.\n");
+            }
+            getc(stdin);
+            break;
+        case 10:
+            if(flag>0)
+            {
+                ll_deleteLinkedList(listaEmpleados);
+            }
+            break;
+        default:
+            printf(" Esta opcion no Existe!!\n");
             break;
         }
     }

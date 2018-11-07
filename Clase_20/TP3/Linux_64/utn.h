@@ -1,91 +1,110 @@
 #ifndef UTN_H_INCLUDED
 #define UTN_H_INCLUDED
 
-/** \brief sets a float
- * \param flt float the float number
- * \return float Return the float number
+/** \brief guarda un flotante
+ * \param mensaje char un mensaje
+ * \param flotante float donde se guarda el numero
+ * \return float Return el numero a guardar
  *
  */
 float utn_setFlotante(char mensaje[], float flotante);
 
-/** \brief sets an integer
- * \param intg int the integer
- * \return int Return the integer
+
+/** \brief guarda un entero
+ * \param mensaje char un mensaje
+ * \param entero int donde se guarda el numero
+ * \return int Return el numero a guardar
  *
  */
 int utn_setEntero(char mensaje[], int entero);
 
-/** \brief sets a name
- * \param str char a string
- * \param len int string lenght
+
+/** \brief guarda un nombre
+ * \param mensaje char un mensaje
+ * \param texto char donde se guarda el nombre
+ * \param len int tamanio de la variable donde se guarda el nombre
+ * \param
  * \return int (0) if error - (1) if ok
  *
  */
 int utn_setNombre(char mensaje[], char texto[], int len);
 
 
-/** \brief sets an alphanumeric string
- * \param str char a string
- * \param len int string lenght
+/** \brief guarda un texto
+ * \param mensaje char un mensaje
+ * \param texto char donde se guarda el tetxo
+ * \param len int tamanio de la variable donde se guarda el texto
  * \return int (0) if error - (1) if ok
  *
  */
 int utn_setTexto(char mensaje[], char texto[], int len);
 
 
+/** \brief guarda un numero cuit
+ * \param mensaje char un mensaje
+ * \param cuit char donde se guarda el numero cuit
+ * \param len int tamanio de la variable donde se guarda el numero cuit
+ * \return int (0) if error - (1) if ok
+ *
+ */
 int utn_setCuit(char mensaje[], char cuit[], int len);
 
-/** \brief sets a float in a margin
- * \param flt float the float number
- * \param minimun float the minimun float number posible
- * \param maximun float the maximun float number posible
+
+/** \brief guarda un numero flotante dentro de un margen
+ * \param mensaje char un mensaje
+ * \param flotante float donde se va a guardar el numero
+ * \param min float el numero flotante minimo disponible
+ * \param max float el numero flotante maximo disponible
  * \return float Return the float number
  *
  */
 float utn_setMargenFlotante(char mensaje[], float flotante, float min, float max);
 
-/** \brief sets a integer in a margin
- * \param intg int the integer
- * \param minimun int the minimun integer posible
- * \param maximun int the maximun integer posible
- * \return int Return the integer
+
+/** \brief guarda un numero entero dentro de un margen
+ * \param mensaje char un mensaje
+ * \param entero int donde se va a guardar el numero
+ * \param min int el numero entero minimo disponible
+ * \param max int el numero entero maximo disponible
+ * \return float Return the float number
  *
  */
 int utn_setMargenEntero(char mensaje[], int entero, int min, int max);
 
 
-/** \brief validates that a string has a flotant number
- * \param str char a string
- * \param len int string lenght
+/** \brief valida que los caracteres de la cadena sean numericos(decimal)
+ * \param str char la cadena de caracteres a validar
+ * \param len int el largo de la cadena de caracteres
  * \return int (0) if error - (1) if ok
  *
  */
 int utn_validarFlotante(char str[], int len);
 
-/** \brief validates that a string has an integer
- * \param str char a string
- * \param len int string lenght
- * \return int (0) if error - (1) if ok
+/** \brief valida que los caracteres de la cadena sean numericos(enteros)
+ * \param str char la cadena de caracteres a validar
+ * \param len int el largo de la cadena de caracteres
  *
  */
 int utn_validarEntero(char str[],int len);
 
-/** \brief validates than a string has alphabetic characters
- * \param str char a string
- * \param len int string lenght
- * \return int (0) if error - (1) if ok
- *
+/** \brief valida que los caracteres de la cadena sean alfabeticos
+ * \param str char la cadena de caracteres a validar
+ * \param len int el largo de la cadena de caracteres
  */
 int utn_validarAlfabetico(char str[], int len);
 
-/** \brief validates than a string has alphanumeric characters
- * \param str char a string
- * \param len int string lenght
- * \return int (0) if error - (1) if ok
+/** \brief valida todos los caracteres.
+ * \param str char la cadena de caracteres a validar
+ * \param len int el largo de la cadena de caracteres
  *
  */
 int utn_validarAlfanumerico(char str[], int len);
 
+/** \brief valida que los caracteres se puedan usar para unnumero cuit
+ * \param str char la cadena de caracteres a validar
+ * \param len int el largo de la cadena de caracteres
+ *
+ */
 int utn_validarCuit(char str[], int len);
 
 #endif
