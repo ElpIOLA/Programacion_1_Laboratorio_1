@@ -58,3 +58,36 @@
 	<string.h>
 	"LinkedList.h"
 
+1542324031 source:/home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV2/Empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Empleado.h"
+
+1542319960 /home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV2/Empleado.h
+
+1542324758 source:/home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV2/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Empleado.h"
+	"LinkedList.h"
+	"Parser.h"
+
+1542318258 /home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV2/LinkedList.h
+
+1542317748 /home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV2/Parser.h
+	"LinkedList.h"
+
+1542323674 source:/home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV2/Parser.c
+	"LinkedList.h"
+	"Empleado.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1542324876 source:/home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV2/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+

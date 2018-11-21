@@ -587,6 +587,26 @@ LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void*))
     return this2;
 }
 
+LinkedList* ll_filterArgs(LinkedList* this, int (*pFunc)(void*,void*), void* args)
+{
+    LinkedList* this2=NULL;
+    void* pElement=NULL;
+    int i;
+
+    if(this != NULL && pFunc != NULL && !ll_isEmpty(this))
+    {
+        this2= ll_newLinkedList();
+        for(i=0; i<ll_len(this); i++)
+        {
+            pElement=ll_get(this,i);
+            if(pFunc(pElement,args))
+            {
+                ll_add(this2,pElement);
+            }
+        }
+    }
+    return this2;
+}
 
 /** \brief rrecorre la lista y realiza una funcion utilizando un elemento de esta
  * \param pList LinkedList* Puntero a la lista
@@ -617,3 +637,4 @@ int ll_map(LinkedList* this, int (*pFunc)(void*))
     }
     return returnAux;
 }
+

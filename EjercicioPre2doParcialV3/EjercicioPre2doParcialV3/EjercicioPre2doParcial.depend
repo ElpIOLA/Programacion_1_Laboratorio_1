@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1542328923 source:/home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/Compra.c
+	"Compra.h"
+	"LinkedList.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1542327308 /home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/Compra.h
+
+1542328961 source:/home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1542318258 /home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/LinkedList.h
+
+1542327742 source:/home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Compra.h"
+	"LinkedList.h"
+	"Parser.h"
+
+1542327355 /home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/Parser.h
+	"LinkedList.h"
+
+1542327650 source:/home/alumno/Escritorio/programacion_1_laboratorio_1/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/Parser.c
+	"LinkedList.h"
+	"Compra.h"
+	"Parser.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1542407690 source:/home/seba18/Desktop/FACULTAD/PROGRAMACION/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/Compra.c
+	"Compra.h"
+	"LinkedList.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1542407691 /home/seba18/Desktop/FACULTAD/PROGRAMACION/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/Compra.h
+	"LinkedList.h"
+
+1542402612 /home/seba18/Desktop/FACULTAD/PROGRAMACION/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/LinkedList.h
+
+1542406880 source:/home/seba18/Desktop/FACULTAD/PROGRAMACION/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1542407845 source:/home/seba18/Desktop/FACULTAD/PROGRAMACION/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Compra.h"
+	"LinkedList.h"
+	"Parser.h"
+
+1542400814 /home/seba18/Desktop/FACULTAD/PROGRAMACION/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/Parser.h
+	"LinkedList.h"
+
+1542407244 source:/home/seba18/Desktop/FACULTAD/PROGRAMACION/EjercicioPre2doParcialV3/EjercicioPre2doParcialV3/Parser.c
+	"LinkedList.h"
+	"Compra.h"
+	"Parser.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
