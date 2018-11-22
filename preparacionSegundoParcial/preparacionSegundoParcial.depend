@@ -1,0 +1,56 @@
+# depslib dependency file v1.0
+1542917275 source:/home/seba18/Desktop/preparacionSegundoParcial/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1542917319 /home/seba18/Desktop/preparacionSegundoParcial/LinkedList.h
+
+1542912561 source:/home/seba18/Desktop/preparacionSegundoParcial/main.c
+	<stdio.h>
+	<stdlib.h>
+	"controller.h"
+
+1542900998 source:/home/seba18/Desktop/preparacionSegundoParcial/utn.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1542801358 /home/seba18/Desktop/preparacionSegundoParcial/utn.h
+
+1542918848 /home/seba18/Desktop/preparacionSegundoParcial/persona.h
+	"LinkedList.h"
+
+1542918939 source:/home/seba18/Desktop/preparacionSegundoParcial/controller.c
+	<stdio.h>
+	<stdlib.h>
+	"parser.h"
+	"controller.h"
+	"utn.h"
+	"LinkedList.h"
+	"persona.h"
+
+1542910821 source:/home/seba18/Desktop/preparacionSegundoParcial/parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"LinkedList.h"
+	"persona.h"
+
+1542918880 source:/home/seba18/Desktop/preparacionSegundoParcial/persona.c
+	"persona.h"
+	"LinkedList.h"
+	"utn.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1542909782 /home/seba18/Desktop/preparacionSegundoParcial/parser.h
+	"LinkedList.h"
+
+1542907173 /home/seba18/Desktop/preparacionSegundoParcial/controller.h
+	"LinkedList.h"
+
